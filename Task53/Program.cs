@@ -1,11 +1,11 @@
 ﻿/* 53. Задайте двумерный массив. Напишите программу,
 которая поменяет местами первую и последнюю строку массива.  */
-int[,] generate2DArray(int colLength, int rowLength, int start, int finish)
+int[,] generate2DArray(int rowLength, int colLength, int start, int finish)
 {
-    int[,] array = new int[colLength, rowLength];
-    for (int i = 0; i < colLength; i++)
+    int[,] array = new int[rowLength, colLength];
+    for (int i = 0; i < rowLength; i++)
     {
-        for (int j = 0; j < rowLength; j++)
+        for (int j = 0; j < colLength; j++)
         {
             array[i, j] = new Random().Next(start, finish + 1);
         }
@@ -52,7 +52,7 @@ int[,] swapRows(int[,] array, int row1, int row2)
     return array;
 }
 
-int[,] array = generate2DArray(10, 7, -5, 10);
+int[,] array = generate2DArray(10, 3, -5, 10);
 printArray(array);
 int[,] swappedArray = swapRows(array, 0, array.GetLength(0) - 1);
 printArray(swappedArray);
