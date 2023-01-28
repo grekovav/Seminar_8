@@ -5,7 +5,6 @@
 11 16 15 06
 10 09 08 07      */
 Console.Clear();
-
 int n = 4;
 int[,] squareMatrix = new int[n, n];
 
@@ -26,7 +25,8 @@ while (temp <= squareMatrix.GetLength(0) * squareMatrix.GetLength(1))
     else
         i--;
 }
-void WriteArray(int[,] array)
+
+void PrintArray(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -40,4 +40,4 @@ void WriteArray(int[,] array)
         Console.WriteLine();
     }
 }
-WriteArray(squareMatrix);
+PrintArray(squareMatrix);
